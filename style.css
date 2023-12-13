@@ -1,0 +1,145 @@
+body {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    background: rgb(8,7,63);
+    background: linear-gradient(90deg, rgba(8,7,63,1) 7%, rgba(33,33,170,1) 29%, rgba(0,212,255,1) 51%, rgba(18,113,208,1) 70%, rgba(2,0,36,1) 95%);
+    
+    
+;
+    
+}
+.corpo {
+ display:inline-block;
+ align-items: center;
+ margin: 50vh;
+ margin: 15%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    border-style:ridge ;
+    border-color: rgb(4, 0, 4);
+    padding: 50px;
+
+ 
+}
+
+#app {
+    max-width: 500px;   
+    width: 100%;
+    text-align: center;
+   
+}
+
+h1 {
+    color:      #000000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-family: monospace;
+    font-size: 30px;
+    background-color: rgb(189, 242, 242);
+    border-radius: 10px;
+    padding: 5px;
+    background: linear-gradient(90deg, rgb(173, 173, 210) 7%, rgb(42, 106, 202) 29%, rgba(0,212,255,1) 51%, rgba(18,113,208,1) 70%, rgb(142, 136, 255) 95%);
+    border-style: inset;
+  
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 60%;
+    margin-right: 5px;
+    box-sizing: border-box;
+    border-radius: 10px ;
+    
+}
+.rodape:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+    justify-content: end;
+    text-align: end;
+    border-radius: 10px ;   
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #dad6d6;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+    align-content: start;
+    text-align: start;
+    align-items: center;
+    border-radius: 10px ;
+
+}
+
+li.completa {
+    background-color: #3df03d;
+    text-decoration: line-through;
+}
+
+.botoesdefil {
+    margin-top: 10px;
+    border-radius: 10px ;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 10px ;
+}
+.rodape {
+   
+   
+    align-self: center;
+    align-items: center;
+    width: 100%;
+     left: 0;
+     height: 8vh;
+     bottom: 2;
+     background-color:  rgb(54, 83, 116);
+     position: fixed;
+     align-self: self-start;
+     box-sizing: border-box;
+     color: #fff;
+     text-decoration:double;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-size: 25px;
+    
+}
+
+#t{
+    background-color:white;
+}
+
+#p{
+    background-color:khaki;
+}
+#c{
+    background-color:springgreen;
+}
+
+#criar{
+background-color: cornflowerblue;
+}

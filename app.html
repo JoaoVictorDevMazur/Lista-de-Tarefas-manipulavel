@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/scrípt.js"></script>
+</head>
+<body> 
+    <div class="rodape">
+        <p>Realizado em conjunto por João Victor Mazur de Matos e Gabriel Henrique Pulner</p>
+    </div>
+<div class="corpo">
+   
+    <div id="app">
+        <h1 class="titulo">Faça sua lista de Tarefas</h1>
+        <div>
+            <input type="text" id="novatarefa" placeholder="Crie uma nova Tarefa">
+            <button id="criar" onclick="adicionar()">Criar</button>
+        </div>
+        <ul id="listadetarefas">
+           
+        </ul>
+        <div class="botoesdefil">
+            <br>
+            <br>
+            
+            <button id="t" onclick="filtro('tudo')">Tudo</button>
+            <button id="p" onclick="filtro('pendentes')">Pendentes</button>
+            <button id="c" onclick="filtro('concluidas')">Concluídas</button>
+        </div>
+    </div>
+ 
+    <script>
+        const listadetarefas = document.getElementById('listadetarefas');
+
+        function adicionar() {
+            const novatarefaInput = document.getElementById('novatarefa');
+            const tarefalistada = novatarefaInput.value.trim();
+
+            if (tarefalistada !== '') {
+                const umatarefa = document.createElement('li');
+                umatarefa.textContent = tarefalistada;
+
+                const excluirb = document.createElement('button');
+                excluirb.textContent = 'Excluir';
+                excluirb.onclick = function () {
+                    listadetarefas.removeChild(umatarefa);
+                };
+
+                const marcadacomoconcluida = document.createElement('button');
+                marcadacomoconcluida.textContent = 'Concluir';
+                marcadacomoconcluida.onclick = function () {
+                    umatarefa.classList.toggle('completa');
+                };
+
+                umatarefa.appendChild(excluirb);
+                umatarefa.appendChild(marcadacomoconcluida);
+
+                listadetarefas.appendChild(umatarefa);
+                novatarefaInput.value = '';
+            }
+        }
+
+        function filtro(filter) {
+            const tarefas = document.querySelectorAll('#listadetarefas li');
+
+           tarefas.forEach(tarefa => {
+                switch (filter) {
+                    case 'tudo':
+                    tarefa.style.display = 'flex';
+                        break;
+                    case 'pendentes':
+                    tarefa.style.display = tarefa.classList.contains('completa') ? 'none' : 'flex';
+                        break;
+                    case 'concluidas':
+                    tarefa.style.display = tarefa.classList.contains('completa') ? 'flex' : 'none';
+                        break;
+                }
+            });
+        }
+    </script>
+
+</div>
+
+
+</body>
+
+
+</html>
